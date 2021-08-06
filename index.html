@@ -18,14 +18,13 @@
           if (err) {
             return $("#output").text("Error Authenticating with GitHub: " + err);
           }
-          $("#output").text("Authenticated with GitHub. Access Token: " + data.token);
+          $("#output").text("Access Token: " + data.token);
         });
       });
     });
   </script>
 </head>
 <body>
-  <h1>GitHub Auth Demo:</h1>
   <p><a href="#" id="login">Authenticate</a></p>
   <p id="output"></p>
 </body>
