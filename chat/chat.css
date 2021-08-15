@@ -1,0 +1,63 @@
+body {
+    color: #421;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Courier New";
+  }
+  
+  body::after {
+    content: "";
+    background-repeat: repeat-y;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  span {
+    color: rgb(36, 17, 119);
+  }
+  ::-webkit-input-placeholder {
+    color: #711;
+  }
+  
+  #main {
+    position: fixed;
+    border: 0px solid #421;
+    padding: 10px;
+  }
+  
+  #main div {
+    margin: 10px;
+  }
+  
+  #input {
+    border: 0;
+    padding: 5px;
+    width: 100%;
+    outline: none;
+  }
+  
+  #textarea {
+    border: 0;
+    padding: 5px;
+    outline: none;
+  }
+  
+  .user{
+    text-align: left;
+    color: #711;
+  }
+  
+  .bot{
+    text-align: right;
+    color: darkgreen;
+  }
+  
+  #simulation-frame{
+    position: absolute;
+    width: 100%;
+  }

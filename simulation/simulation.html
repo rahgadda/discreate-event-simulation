@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="simulation.css">
+    <script type="text/javascript" src="simulation.js"></script>
+    <title>Discrete Event Simulation</title>
+</head>
+
+<body onload="displaySimulation()">
+    <div>
+        <div class="timer">Total Time 00:00</div>
+        <div class="start-stop-button" onclick="startSimulation()">Start</div>
+    </div>
+    
+    <h5 class="account-header">Accounts</h5>
+    <div id="account" class="account"></div>
+    
+    <h5 class="segment-header">Segments</h5>
+    <div id="segment" class="segment">
+    </div>
+    
+    <h5 class="agent-header">Collection Agents</h5>
+    <div id="agent" class="agent">
+    </div>
+</body>
+
+</html>

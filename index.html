@@ -1,31 +1,27 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <title>GitHub Authentication Example</title>
-  <!--- This example uses jQuery: -->
-  <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
-
-  <!-- Make sure to include Nelify’s authentication library -->
-  <!-- Also available via npm as netlify-auth-providers -->
-  <script src="https://unpkg.com/netlify-auth-providers"></script>
-
-  <script>
-    $(function() {
-      $("#login").on("click", function(e) {
-        e.preventDefault();
-        var authenticator = new netlify.default ({});
-        authenticator.authenticate({provider:"github", scope: "user"}, function(err, data) {
-          if (err) {
-            return $("#output").text("Error Authenticating with GitHub: " + err);
-          }
-          $("#output").text("Access Token: " + data.token);
-        });
-      });
-    });
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
+    <title>Simulation Bot</title>
 </head>
+
 <body>
-  <p><a href="#" id="login">Authenticate</a></p>
-  <p id="output"></p>
+    <iframe class="paper" id="iframe_chat_window"
+        style="visibility:visible;"
+        scrolling="auto"
+        onload="this.style.visibility = 'visible';" src="chat\chat.html"></iframe>
+    <div class="chat">
+        <i id="chat_icon"
+           class="fas fa-comments" onclick="chatClick()"></i>
+    </div>
+    <iframe id="simulation-frame" src="" height="90%" width="95%" frameborder="0" style="display: none;">
+    </iframe>
 </body>
+
 </html>

@@ -1,0 +1,73 @@
+.start-stop-button{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  color: white;
+  border-radius: 12px;
+  background-color: #4285f4;
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.start-stop-button:hover {
+  box-shadow: 0 0 16px 16px rgba(0, 0, 0, 0.2);
+}
+
+.timer{
+  position: absolute;
+  top: 2.5%;
+  left: 13%;
+  color: #4285f4;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.account-header {
+    top: 10%;
+    position: absolute;
+    color: #4285f4;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.segment-header {
+    top: 10%;
+    left: 49%;
+    color: #4285f4;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;  
+  }
+
+.agent-header {
+    top: 10%;
+    left: 86%;
+    color: #4285f4;
+    position: absolute; 
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+i {
+  font-size: 36px;
+  color: #4285f4;
+}
+
+.account > * { 
+  -webkit-animation: linear;
+  -webkit-animation-name: moveToSegment;
+  -webkit-animation-duration: 5s; 
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes moveToSegment {
+  50% {
+    top: 20%;
+    left: 20%;
+  }
+  100% {
+    top: 20%;
+    left: 45%;
+  }
+}
