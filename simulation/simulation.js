@@ -17,7 +17,7 @@ let simulationDetails = {
 };
 
 function displaySimulation() {
-  //simulationDetails=parent.returnSimulationDetails();
+  simulationDetails=parent.returnSimulationDetails();
   const accountNodes = document.getElementById("account");
   const segmentNodes = document.getElementById("segment");
   const agentNodes = document.getElementById("agent");
