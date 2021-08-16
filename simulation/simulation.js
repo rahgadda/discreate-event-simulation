@@ -17,7 +17,7 @@ let simulationDetails = {
 };
 
 function displaySimulation() {
-  simulationDetails=parent.returnSimulationDetails();
+  //simulationDetails=parent.returnSimulationDetails();
   const accountNodes = document.getElementById("account");
   const segmentNodes = document.getElementById("segment");
   const agentNodes = document.getElementById("agent");
@@ -70,6 +70,15 @@ function displaySimulation() {
     iTag.style.position="absolute";
     iTag.style.left="90%";
     iTag.style.top = 20 + i * 10 + "%";
+
+    let h1Tag = document.createElement('h1');
+    h1Tag.setAttribute("class","agent-counter");
+    h1Tag.style.position="absolute";
+    h1Tag.style.left="95%";
+    h1Tag.innerHTML="0"
+    h1Tag.style.top = 16 + i * 10 + "%";
+
+    agentNodes.appendChild(h1Tag);
     agentNodes.appendChild(iTag);
   }
 
@@ -85,6 +94,7 @@ function displaySimulation() {
   //Poller To Move Accounts to Agents
   pollerInterval = setInterval(function () {
     const h1Tag = document.getElementsByClassName("segment-counter");
+    const h1AgentTag = document.getElementsByClassName("agent-counter");
     count =0;
 
     for(let i=0; i<h1Tag.length; i++){
@@ -101,6 +111,7 @@ function displaySimulation() {
         }
         
         h1Tag[reAssignmentSegmentCounter].innerHTML=parseInt(h1Tag[reAssignmentSegmentCounter].innerHTML)-1;
+        h1AgentTag[k].innerHTML=parseInt(h1AgentTag[k].innerHTML)+1;
         document.getElementById(reAssignmentCounter).style.top=20 + k * 10 + "%";
         document.getElementById(reAssignmentCounter).style.left = "85%";
         reAssignmentCounter++;
